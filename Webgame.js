@@ -61,3 +61,28 @@ document.querySelector('.again').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#222';
     document.querySelector('.number').style.width = '15rem';
 });
+
+// script.js
+
+// Get the toggle button
+const toggleButton = document.getElementById('toggle-mode');
+
+// Check if there's a saved theme in localStorage
+const currentTheme = localStorage.getItem('theme');
+
+// Apply the saved theme if it exists
+if (currentTheme) {
+    document.body.classList.add(currentTheme);
+}
+
+// Add an event listener to the toggle button
+toggleButton.addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+
+    // Save the user's preference in localStorage
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        localStorage.setItem('theme', '');
+    }
+});

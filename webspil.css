@@ -117,3 +117,44 @@ h1 {
 .label-score {
     margin-bottom: 2rem;
 }
+
+/* Default light mode styles */
+body {
+    background-color: white;
+    color: black;
+}
+.right {
+     color: black
+ }
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+/* Other elements styles for light and dark modes */
+header {
+    border-bottom: 7px solid #222;
+}
+
+body.dark-mode header {
+    border-bottom: 7px solid #eee;
+}
+body.dark-mode .right{
+    color: white;
+}
+
+button {
+    background-color: #eee;
+    color: #222;
+    padding: 1rem 2rem;
+    font-size: 7rem;
+    border: none;
+    cursor: pointer;
+}
+
+body.dark-mode button {
+    background-color: #222;
+    color: #eee;
+}
